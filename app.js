@@ -109,6 +109,6 @@ app.use((err, req, res, next) => {
 });
 
 // setting up port
-app.listen(port, () => {
-    console.log(`Port ${port} is listening`);
-});
+// app.listen(port, () => {
+//     console.log(`Port ${port} is listening`);
+// });
