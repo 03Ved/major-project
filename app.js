@@ -103,12 +103,17 @@ app.use("/", userRoutes);
 //     next(new ExpressError("Page Not Found", 404));
 // });
 
+// Define a route for the root URL
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 app.use((err, req, res, next) => {
     let {statusCode = 500, message = "Something went wrong"} = err;
     res.status(statusCode).render("listings/error.ejs", {message});
 });
 
 // setting up port
-// app.listen(port, () => {
-//     console.log(`Port ${port} is listening`);
-// });
+app.listen(port, () => {
+    console.log(`Port ${port} is listening`);
+});
