@@ -16,6 +16,7 @@
         display: flex;
         align-items: center;
         overflow-x: auto;
+        padding-bottom: 0.5rem;
     }
 
     .nav {
@@ -28,7 +29,19 @@
     }
 
     .filters::-webkit-scrollbar {
-        display: none;
+        height: 0.4rem
+    }
+
+    .filters::-webkit-scrollbar-thumb {
+        background-color: #fe4e4d;
+        border-radius: 1rem;
+        height: 0.4rem;
+        width: 2rem;
+    }
+
+    .filters::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        border-radius: 1rem;
     }
 
     button {
@@ -50,7 +63,7 @@
     }
 
     .nav-item .nav-link {
-        color: #323232;
+         color: #454545;
     }
 
     .nav-link:hover {
@@ -74,18 +87,18 @@
     }
 
     .line2 {
-        border: 2px solid white;
+        order: 0.5px solid white;
         width: 0%;
         height: 50%;
+        margin-bottom: 1.3rem;
         box-shadow: -4px 0 10px 20px white;
     }
 
     .line1 {
         margin-left: 8rem;
-        border: 2px solid white;
+        border: 0.5px solid white;
         width: 0%;
         height: 50%;
-        box-shadow: 4px 0 10px 20px white;
         z-index: 1;
     }
 
@@ -97,7 +110,7 @@
     @media (max-width: 1197px) {
 
         .line1 {
-            margin-left: 0;
+            margin-left: 4rem;
         }
     }
 </style>
@@ -142,7 +155,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/listings/category/Luxury"><i class="fa-solid fa-couch"></i> <br>Luxury</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" style="margin-right: 1rem;">
                 <a class="nav-link" href="/listings/category/Castle"><i class="fa-brands fa-fort-awesome"></i> <br>Castle</a>
               </li> 
           </ul>
