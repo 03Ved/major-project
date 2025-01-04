@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/listings"><i class="fa-brands fa-airbnb"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="display: flex;justify-content: space-between;">
+            <div class="navbar-nav">
+                <a class="nav-link " href="/listings">Explore</a>
+                <a class="nav-link" href="/listings/new">Add new Listings</a>
+            </div>
+            <div class="search">
+                <form class="d-flex" role="search" action="/listings/search">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="searchQuery" aria-label="Search" style="border-radius: 2rem; flex: 1 1.5 0; width: 20rem;">
+                    <button class="btn btn-outline-danger" type="submit" style="border-radius: 2rem ;">Search</button>
+                  </form>
+            </div>
+            <div class="navbar-nav">
+                <% if(!currentUser) { %>
+                    <a class="nav-link" href="/signup"><b style="font-weight: 600;">SignUp</b></a>
+                    <a class="nav-link" href="/login"><b style="font-weight: 600;">Login</b></a>
+                <% } %>
+                <% if(currentUser) {%>
+                    <a class="nav-link" href="/logout"><b style="color: #fe4e4d; font-weight: 600;">Logout</b></a>
+                    <i class="fa-solid fa-circle-user" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-title="<%= currentUser.username %>" data-bs-content="<%= currentUser.email %>"></i> 
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+

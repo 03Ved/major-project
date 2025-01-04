@@ -1,0 +1,171 @@
+.container {
+    min-height: 78.45vh;
+}
+
+header {
+    top: 0rem;
+    position: sticky;
+    z-index: 1000;
+}
+
+footer {
+    /* width: 100%;
+    position: absolute;
+    bottom: 0rem; */
+    margin-top: 1rem;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+.navbar {
+    /* height: 4.5rem; */
+    background-color: white;
+}
+
+.navbar2 {
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.fa-airbnb {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222;
+}
+
+footer div {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-icons i, .f-brand, .f-links a {
+    color: #222222;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.f-links a:hover {
+    text-decoration: underline;
+}
+
+.f-icons i {
+    font-size: 1.25rem;
+}
+
+.f-icons i:hover {
+    font-size: 1.35rem;
+    color: #fe424d;
+}
+
+.card {
+    width: 24rem;
+    margin: 1rem;
+    height: 20rem;
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    height: 75%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-link:hover {
+    opacity: 0.8;
+}
+
+.card-title {
+    font-weight: 625;
+    color: #222222;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .card {
+        width: 25rem;
+        /* height: 25rem; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .card {
+        width: 20rem;
+        /* height: 25rem; */
+    }
+}
+
+@media (min-width: 625px) and (max-width: 768px) {
+    .card {
+        width: 15rem;
+        /* height: 15rem; */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 625px) {
+    .card {
+
+        width: 14rem;
+        /* height: 20rem; */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 20rem;
+        /* height: 15rem; */
+    }
+}
+
+.show-buttons {
+    display: flex;
+}
+
+#map { 
+    height: 350px;
+    width: 60vh;
+    border-radius: 1rem;
+}
+
+.marker {
+    background-image: url("./images/airbnb.png");
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: contain;
+} 
+
+.fa-circle-user {
+    font-size: 2.25rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.15rem;
+    color: #fe424d;
+    cursor: pointer;
+}
+
+.custom-popover {
+  color: white;
+  border-color: #fe424d;
+}
+
+.custom-popover .popover-header {
+  background-color: #fe424d;
+  text-align: center;
+}
+
+.custom-popover .popover-body {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}

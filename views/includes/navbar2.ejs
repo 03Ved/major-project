@@ -1,0 +1,158 @@
+<style>
+    .nav-item i {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        padding: 0 0.5rem;
+        margin-left: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .filters {
+        max-width: 65%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .nav-item {
+        flex: 0 0 auto;
+    }
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    button {
+        position: relative;
+        right: 0;
+    }
+
+    .extra {
+        display: flex;
+        margin-left: 2rem;
+        border: 2px solid black;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-weight: 600;
+    }
+
+    .extra:hover {
+        background-color: rgb(241, 240, 240);
+    }
+
+    .nav-item .nav-link {
+        color: #323232;
+    }
+
+    .nav-link:hover {
+        color: #fe4e4d;
+    }
+
+    .nav-underline a {
+        color: #fe4e4d;
+    }
+
+    .extra, .extra div, input, label {
+        cursor: pointer;
+    }
+
+    .nav-link:focus {
+        color: #fe4e4d;
+    }
+
+    .active {
+        color: #fe4e4d;
+    }
+
+    .line2 {
+        border: 2px solid white;
+        width: 0%;
+        height: 50%;
+        box-shadow: -4px 0 10px 20px white;
+    }
+
+    .line1 {
+        margin-left: 8rem;
+        border: 2px solid white;
+        width: 0%;
+        height: 50%;
+        box-shadow: 4px 0 10px 20px white;
+        z-index: 1;
+    }
+
+    #tax-btn {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    @media (max-width: 1197px) {
+
+        .line1 {
+            margin-left: 0;
+        }
+    }
+</style>
+
+<nav class="navbar2">
+    <div class="line1"></div>
+    <div class="filters">
+        <ul class="nav nav-underline">
+            <li class="nav-item"> 
+              <a class="nav-link " href="/listings/category/Trending"><i class="fa-solid fa-fire"></i> <br> Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/category/Lake"><i class="fa-solid fa-water"></i> <br> Lake</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/category/Mountains"> <i class="fa-solid fa-mountain"></i> <br> Mountains</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/category/Camping"><i class="fa-solid fa-campground"></i> <br> Camping</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/category/Forest"><i class="fa-solid fa-tree"></i> <br> Forest</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="/listings/category/Snow"><i class="fa-regular fa-snowflake"></i> <br> Snow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/category/Cities"><i class="fa-solid fa-building"></i> <br>Cities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Foreign"><i class="fa-solid fa-plane"></i> <br>Foreign</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Landmarks"><i class="fa-solid fa-landmark"></i> <br>Landmarks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Nature"><i class="fa-brands fa-envira"></i> <br>Nature</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Boating"><i class="fa-solid fa-ship"></i> <br>Boating</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Luxury"><i class="fa-solid fa-couch"></i> <br>Luxury</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/category/Castle"><i class="fa-brands fa-fort-awesome"></i> <br>Castle</a>
+              </li> 
+          </ul>
+    </div>
+    <div class="line2"></div>
+    <div class="extra">
+        <div class="form-check form-check-reverse form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault" id="tax-btn">Display total after taxes</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,149 @@
+<% layout('layouts/boilerplate') -%>
+<div class="row">
+    <div class="col-8 offset-2">
+        <h3 style="color: #fe424d;">Edit Listing:</h3>
+        <form action="/listings/<%= listing._id %>?_method=put" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="form-info mb-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" name="newListing[title]" value="<%= listing.title %>" id="title" class="form-control" required>
+                <div class="valid-feedback">Title looks good!</div>
+                <div class="invalid-feedback">Please enter a Title</div>
+            </div>
+            <div class="form-info mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <textarea name="newListing[description]" rows="3" cols="15" id="description" class="form-control" required><%= listing.description %></textarea>
+                <div class="valid-feedback">Description looks good!</div>
+                <div class="invalid-feedback">Too Short Description!</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-info mb-3" style="text-align: center;">
+                        <label for="orgImg" class="form-label">Original Listing:</label> <br>
+                        <img src="<%= listing.image.url %>" alt="Listing Image" id="orgImg" style="width: 20rem; height: 20rem; border-radius: 1rem;"> 
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-info mb-3">
+                        <label for="title" class="form-label">Select Categories:</label>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Trending" id="trending">
+                                    <label class="form-check-label" for="trending">
+                                      Trending
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Lake" id="lake">
+                                    <label class="form-check-label" for="lake">
+                                      Lake
+                                    </label>
+                                  </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Mountains" id="mountains">
+                                    <label class="form-check-label" for="mountains">
+                                      Mountains
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Camping" id="camping">
+                                    <label class="form-check-label" for="camping">
+                                      Camping
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Forest" id="forest">
+                                    <label class="form-check-label" for="forest">
+                                      Forest
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Snow" id="snow">
+                                    <label class="form-check-label" for="snow">
+                                      Snow
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Cities" id="cities">
+                                    <label class="form-check-label" for="cities">
+                                      Cities
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check mb-2"> 
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Foreign" id="foreign">
+                                    <label class="form-check-label" for="foreign">
+                                      Foreign
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Landmarks" id="landmarks">
+                                    <label class="form-check-label" for="landmarks">
+                                      Landmarks
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Nature" id="nature">
+                                    <label class="form-check-label" for="nature">
+                                      Nature
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Boating" id="boating">
+                                    <label class="form-check-label" for="boating">
+                                      Boating
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Luxury" id="luxury">
+                                    <label class="form-check-label" for="luxury">
+                                      Luxury
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="newListing[category]" value="Castle" id="castle">
+                                    <label class="form-check-label" for="castle">
+                                      Castle
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+            <div class="form-info mb-3">
+                <label for="image" class="form-label">Upload New Image:</label>
+                <input type="file" name="newListing[image]" id="image" class="form-control">
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4">    
+                    <div class="form-info mb-3">
+                        <label for="price" class="form-label">Price:</label>
+                        <input type="text" name="newListing[price]" value="<%= listing.price %>" id="price" class="form-control">
+                        <div class="valid-feedback">Default Price: &#8377; 500</div>
+                    </div>
+                </div>
+        
+                <div class="col-md-8">
+                    <div class="form-info mb-3">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" name="newListing[country]" value="<%= listing.country %>" id="country" class="form-control" required>
+                        <div class="valid-feedback">Country looks good!</div>
+                        <div class="invalid-feedback">Please enter a Country</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="form-info mb-3">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" name="newListing[location]" value="<%= listing.location %>" id="location" class="form-control" required>
+                <div class="valid-feedback">Location looks good!</div>
+                <div class="invalid-feedback">Please enter a Location</div>
+            </div>
+            <button class="btn btn-dark" style="background-color: #fe424d;">Edit</button>
+        </form>
+    </div>
+</div>
+
