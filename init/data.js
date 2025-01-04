@@ -1,4 +1,4 @@
-const sampleListings = [
+[
   {
     title: "Cozy Beachfront Cottage",
     description:
@@ -377,13 +377,3 @@ const sampleListings = [
     owner: "677933a85084938f99681596"
   },
 ];
-
-// module.exports = { data: sampleListings };
-// const updatedListings = sampleListings.map(listing => {
-//   return {
-//     ...listing,
-//     owner: "676cd54aca8b2123c764fb14",
-//   };
-// });
-
-// module.exports = { data: updatedListings };
