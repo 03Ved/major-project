@@ -13,5 +13,9 @@ Real-time world location with help of maps
 You can create your own account using SignUp feature, or use this default if you don't wish to:
 username: Bob
 password: password
+Note: Only owner of a listing can edit or delete the listing. If you wish to make changes or to delete a listing, you can become an owner of a new listing and try these features on it.
+
+Here is the link for the project: https://major-project-43ou.onrender.com/listings
 
 Thank-You!
+
