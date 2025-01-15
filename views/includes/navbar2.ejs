@@ -4,7 +4,7 @@
     }
 
     .nav-item {
-        padding: 0 0.5rem;
+        padding: 0.25rem 0.5rem;
         margin-left: 1rem;
         text-align: center;
         font-size: 0.8rem;
@@ -13,10 +13,12 @@
 
     .filters {
         max-width: 65%;
+        min-width: 290px;
         display: flex;
         align-items: center;
         overflow-x: auto;
-        padding-bottom: 0.5rem;
+        scroll-behavior: smooth;
+        background-color: #f6f3f3;
     }
 
     .nav {
@@ -29,7 +31,8 @@
     }
 
     .filters::-webkit-scrollbar {
-        height: 0.4rem
+        height: 0.4rem;
+        display: none;
     }
 
     .filters::-webkit-scrollbar-thumb {
@@ -56,6 +59,7 @@
         padding: 0.5rem 1rem;
         border-radius: 1rem;
         font-weight: 600;
+        min-width: fit-content;
     }
 
     .extra:hover {
@@ -91,7 +95,6 @@
         width: 0%;
         height: 50%;
         margin-bottom: 1.3rem;
-        box-shadow: -4px 0 10px 20px white;
     }
 
     .line1 {
@@ -113,10 +116,30 @@
             margin-left: 4rem;
         }
     }
+
+    .navbar2 button {
+        position: relative;
+        border-radius: 50%;
+        min-height: 2em;
+        min-width: 2em;
+        background-color: #fe4e4d;
+        color: white;
+        font-weight: 500;
+        border: none;
+    }
+
+    #left {
+        translate: 50% 0;
+    }
+
+    #right {
+        translate: -50% 0;
+    }
 </style>
 
 <nav class="navbar2">
     <div class="line1"></div>
+    <button id="left"><i class="fa-solid fa-angle-left"></i></button>
     <div class="filters">
         <ul class="nav nav-underline">
             <li class="nav-item"> 
@@ -160,6 +183,7 @@
               </li> 
           </ul>
     </div>
+    <button id="right"><i class="fa-solid fa-angle-right"></i></button>
     <div class="line2"></div>
     <div class="extra">
         <div class="form-check form-check-reverse form-switch">
@@ -169,3 +193,16 @@
     </div>
 </nav>
 
+<script>
+    let btnL = document.querySelector("#left");
+    let btnR = document.querySelector("#right");
+    let filters = document.querySelector(".filters");
+
+    btnL.addEventListener("click", function() {
+        filters.scrollLeft -= 300;
+    });
+
+    btnR.addEventListener("click", function() {
+        filters.scrollLeft += 300;
+    });
+</script>
